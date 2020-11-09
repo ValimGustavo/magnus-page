@@ -1,0 +1,13 @@
+.container-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    height: 5vh;
+    width: 25vw;
+    margin: 10px;
+    font-size: 20px;
+}

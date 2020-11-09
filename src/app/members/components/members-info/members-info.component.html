@@ -1,0 +1,13 @@
+<form action="" class="container-flex">
+  <input type="text" name="firstName" id="firstName" [value]=[member.firstName] />
+  <input type="text" name="lastName" id="lastName" [value]=[member.lastName] />
+
+  <div class="contacts">
+    <input type="tel" name="phone" id="phone" [value]=[member.contacts.phone]/>
+    <input type="tel" name="cel" id="cel" [value]=[member.contacts.cel]/>
+    <input type="email" name="email" id="email" [value]=[member.contacts.email]/>
+  </div>
+
+  <input type="date" name="birth" id="birth" [value]=[member.birthDate]/>
+  <input type="file" name="medic" id="medic" />
+</form>

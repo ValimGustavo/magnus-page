@@ -1,0 +1,81 @@
+﻿{
+    "members": [
+        {
+            "id": 1,
+            "firstName": "Gustavo",
+            "lastName": "Souza",
+            "contacts": {
+                "phone": "999999999",
+                "cel": "999999999",
+                "email": "999999999"
+            },
+            "birthDate": "21/02/1985"
+        },
+        {
+            "id": 2,
+            "firstName": "Mario",
+            "lastName": "Bros",
+            "contacts": {
+                "phone": "999999999",
+                "cel": "999999999",
+                "email": "999999999"
+            },
+            "birthDate": "11/02/1700"
+        }
+    ],
+
+    "swordplay":[
+        {
+            "id": 1,
+            "orders":[
+                {
+                    "id": 1,
+                    "name": "BOW",
+                    "description": "Order the bow",
+                    "skill": "basico"
+                },
+                {
+                    "id": 2,
+                    "name": "Dual",
+                    "description": "Order the dual",
+                    "skill": "avançado"
+                },
+                {
+                    "id": 3,
+                    "name": "Escudo",
+                    "description": "Order the shield",
+                    "skill": "basico"
+                }
+
+            ],
+            "patent": {
+                "id": 1,
+                "description": "description the peasant",
+                "name": "Peasant"
+            }
+        },
+        {
+            "id": 2,
+            "orders":[
+                {
+                    "id": 1,
+                    "name": "BOW",
+                    "description": "Order the bow",
+                    "skill": "basico"
+                },
+                {
+                    "id": 2,
+                    "name": "Dual",
+                    "description": "Order the dual",
+                    "skill": "avançado"
+                }
+
+            ],
+            "patent": {
+                "id": 1,
+                "description": "description the EOLERT",
+                "name": "Peasant"
+            }
+        }
+    ]
+}
