@@ -1,9 +1,9 @@
 ﻿
-import { Orders } from './orders.interfaces';
+import { Order } from './orders.interfaces';
 import { Member } from '../members/members.interface';
 import { Patent } from './patent.interface';
 export interface SwordplayPlayer {
     member: Member,
-    orders: Orders[]
+    orders: Order[]
     patent: Patent,
 }

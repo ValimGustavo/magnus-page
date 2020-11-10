@@ -1,5 +1,5 @@
 import { ordersExample } from './../../../../../../template-data/order.template';
-import { Orders } from './../../../../../interfaces/swordplay/orders.interfaces';
+import { Order } from './../../../../../interfaces/swordplay/orders.interfaces';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -12,7 +12,7 @@ export class OrderInfoComponent implements OnInit {
   constructor() { }
 
   
-  orders:Orders[]
+  orders:Order[]
 
   @Input() orderInput 
 

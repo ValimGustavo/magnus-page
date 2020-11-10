@@ -21,7 +21,7 @@ export class SwordplayMembersTableComponent implements AfterViewInit, OnInit {
   dataSource: SwordplayMembersTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', 'patent'];
+  displayedColumns = ['id', 'firstName', 'lastName', 'patent'];
 
   constructor(
     private router: Router,
@@ -34,7 +34,6 @@ export class SwordplayMembersTableComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     this.swordplayService.read().subscribe((swordplayPlayer) => {
-      console.log(swordplayPlayer);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;
       this.table.dataSource = swordplayPlayer;

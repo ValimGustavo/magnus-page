@@ -18,11 +18,16 @@ export class MembersInfoComponent implements OnInit {
 
   member: Member
 
-  @Input() idInput: string | number
+  @Input() idInput: Member
 
   ngOnInit(): void {
-    const id = this.idInput || this.route.snapshot.paramMap.get('id')
+   if(!this.idInput){
+    const id = this.route.snapshot.paramMap.get('id')
     this.memberService.getMember(id).subscribe( member => this.member = member)
+   }else{
+     this.member = this.idInput
+   }
+    
   }
 
 }

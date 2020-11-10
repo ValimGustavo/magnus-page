@@ -1,11 +1,7 @@
-﻿export interface SKILL {
-    INITIAL: 'Inicial',
-    BASIC: 'Basico',
-    TATICS: {
-      FORMATION: 'Formaçao',
-      INFILTRATE: 'Infiltraçao',
-    },
-    ADVANCED: 'Avançado',
-    MASTER: 'Mestre',
+﻿import { SKILL as skillEnum} from './../../enum/swordplay/skill.enum';
+export interface SKILL {
+
+  id: number | string,
+  name: typeof skillEnum
   }
   

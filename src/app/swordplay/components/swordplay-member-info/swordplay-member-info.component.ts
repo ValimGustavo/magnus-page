@@ -10,16 +10,12 @@ import { swordplayPlayerExemple } from 'template-data/swordplayerPlayer.template
   styleUrls: ['./swordplay-member-info.component.scss'],
 })
 export class SwordplayMemberInfoComponent implements OnInit {
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    private swordplayService: SwordplayService
-  ) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   swordplayPlayer: SwordplayPlayer;
   ngOnInit(): void {
-    const id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.swordplayService.getById(id).subscribe((response) => {
-      this.swordplayPlayer = response;
-    });
+    this.swordplayPlayer = this.activatedRoute.snapshot.data[
+      'swordplayMemberResolve'
+    ];
   }
 }

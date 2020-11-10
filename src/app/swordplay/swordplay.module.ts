@@ -11,6 +11,9 @@ import { MatSortModule } from '@angular/material/sort';
 import { SwordplayMemberInfoComponent } from './components/swordplay-member-info/swordplay-member-info.component';
 import { OrderInfoComponent } from './components/order/order-info/order-info.component';
 import { PatentInfoComponent } from './components/patent/patent-info/patent-info.component';
+import { OrderReadComponent } from './components/order/order-read/order-read.component';
+import { OrderMembersTableComponent } from './table/order/order-members-table/order-members-table.component';
+import { SkillPipe } from './pipes/skill.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { PatentInfoComponent } from './components/patent/patent-info/patent-info
     SwordplayMemberInfoComponent,
     OrderInfoComponent,
     PatentInfoComponent,
+    OrderReadComponent,
+    OrderMembersTableComponent,
+    SkillPipe,
   ],
   imports: [CommonModule, MatTableModule, MatPaginatorModule, MatSortModule, MembersModule],
 })

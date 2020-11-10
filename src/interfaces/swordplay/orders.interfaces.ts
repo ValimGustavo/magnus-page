@@ -4,7 +4,7 @@ import { ORDERS } from 'src/enum/swordplay/orders.enum';
 
 type ID = string | number
 
-export interface Orders {
+export interface Order {
     id: ID;
     name: ORDERS;
     description: string;

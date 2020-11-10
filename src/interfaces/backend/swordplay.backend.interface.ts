@@ -1,8 +1,8 @@
 ﻿import { Patent } from './../swordplay/patent.interface';
-import { Orders } from '../swordplay/orders.interfaces';
+import { Order } from '../swordplay/orders.interfaces';
 
 export interface SwordplayResponse {
     id: string | number,
-    orders:Orders[],
+    orders:Order[],
     patent: Patent
 }

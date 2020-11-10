@@ -1,7 +1,7 @@
 ﻿import { SKILL } from './../src/enum/swordplay/skill.enum';
 import { ORDERS } from 'src/enum/swordplay/orders.enum';
-import { Orders } from './../src/interfaces/swordplay/orders.interfaces';
-export const ordersExample:Orders[] = [
+import { Order } from './../src/interfaces/swordplay/orders.interfaces';
+export const ordersExample:Order[] = [
     {
         id: 1,
         name: ORDERS.BOW,
