@@ -1,68 +1,60 @@
-<!-- <div class="container-flex">
-    <img src="../../../assets/magnus-legio-logo.png" alt="magnus legio logo" />
-    <nav>
-        <ul class="ul-flex">
-            <li><a routerLink='/'>Sobre</a></li>
-            <li><a routerLink='/members'>Membros</a></li>
-            <li><a routerLink='/'>Contato</a></li>
-            <li><a routerLink='/'>Treinos</a></li>
-            <li><a routerLink='/swordplay'>Swordplay</a></li>
-            <li><a routerLink='/login'>Login</a></li>
-            <li><a routerLink='/orders'>Treino - Orders</a></li>
-        </ul>
-    </nav>
-</div> -->
-<ul class="nav nav-pills">
-  
-  <li class="nav-item">
-    <a class="nav-link" routerLink='/'>Sobre</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink='/members'>Membros</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink='/'>Contato</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink='/'>Treinos</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" routerLink='/swordplay'>Swordplay</a>
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-link" routerLink='/swordplay'>Swordplay</a>
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-link" routerLink='/orders'>Treino - Orders</a>
-  </li>
-  
-  <div *ngIf="isLogged ;else btn_login">
-    <!-- Dropdowm para navegar quando estiver logado-->
-    <li class="nav-item dropdown">
-      <a
-        class="nav-link dropdown-toggle"
-        data-toggle="dropdown"
-        href="#"
-        role="button"
-        aria-haspopup="true"
-        aria-expanded="false"
-        >Dropdown</a
-      >
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="#">Separated link</a>
-      </div>
-    </li>
-  </div>
-
-  <ng-template #btn_login>
+<div class="container-flex">
+  <ul class="nav nav-pills">
     <li class="nav-item">
-        <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+        <img
+          id="logo"
+          class="img-fluid"
+          src="../../../assets/magnus-legio-logo.png"
+          alt="magnus legio logo"
+        />
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/">Sobre</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/members">Membros</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/">Contato</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/">Treinos</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/swordplay">Swordplay</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/orders">Treino - Orders</a>
+    </li>
+
+    <div class="container-dropdown" *ngIf="isLogged; else btn_login">
+      <!-- Dropdowm para navegar quando estiver logado-->
+      <li class="nav-item dropdown">
+        <div ngbDropdown class="d-inline-block">
+          <button
+            class="btn btn-outline-primary"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+          >
+            user name
+          </button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
       </li>
-  </ng-template>
-</ul>
+    </div>
+
+    <ng-template class="container-dropdown" #btn_login>
+      <li class="nav-item">
+        <button type="button" class="btn btn-primary" (click)="login()">
+          Login
+        </button>
+      </li>
+    </ng-template>
+  </ul>
+</div>

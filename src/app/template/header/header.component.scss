@@ -1,24 +1,40 @@
 .container-flex {
     display: flex;
-    justify-content: space-around;
+    justify-content: safe;
     flex-direction: row;
     align-items: center;
+    background-color: #0F0061;
 }
+
 
 .ul-flex {
     width: 100%;
-
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
 }
 
-img {
-    width: 15vw;
-    height: 25vh;
+#logo {
+    width: 8vw;
+    height: 13vh;
 }
 
 li {
     list-style-type: none;
-    margin: 10px;
+    margin: auto;
+    padding: 10px;
+}
+
+a {
+    color:white;
+    font-size: 20px;
+    
+}
+
+a:hover {
+    border: 1px solid yellow;
+}
+
+#container-dropdown {
+    align-items: center;
 }

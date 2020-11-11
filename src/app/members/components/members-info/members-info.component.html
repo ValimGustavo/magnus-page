@@ -1,13 +1,110 @@
-<form action="" class="container-flex">
-  <input type="text" name="firstName" id="firstName" [value]=[member.firstName] />
-  <input type="text" name="lastName" id="lastName" [value]=[member.lastName] />
-
-  <div class="contacts">
-    <input type="tel" name="phone" id="phone" [value]=[member.contacts.phone]/>
-    <input type="tel" name="cel" id="cel" [value]=[member.contacts.cel]/>
-    <input type="email" name="email" id="email" [value]=[member.contacts.email]/>
+<form class="container">
+  <!-- dados sobre nome -->
+  <div class="form-row">
+    <div class="form-group col-md-5">
+      <label for="firstName">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        name="firstName"
+        id="firstName"
+        [value]="[member.firstName]"
+      />
+    </div>
+    <div class="form-group col-md-5">
+      <label for="lastName">Sobrenome</label>
+      <input
+        type="text"
+        class="form-control"
+        name="lastName"
+        id="lastName"
+        [value]="[member.lastName]"
+      />
+    </div>
   </div>
 
-  <input type="date" name="birth" id="birth" [value]=[member.birthDate]/>
-  <input type="file" name="medic" id="medic" />
+  <!-- dados sobre endereço -->
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="street">Rua</label>
+      <input type="text" class="form-control" name="street" id="street" />
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="number">Numero</label>
+      <input type="text" class="form-control" name="number" id="number" />
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="neighborhood">Bairro</label>
+      <input
+        type="text"
+        class="form-control"
+        name="neighborhood"
+        id="neighborhood"
+      />
+    </div>
+
+    <div class="form-group col-md-3">
+      <label for="city">Cidade</label>
+      <input type="text" class="form-control" name="city" id="city" />
+    </div>
+  </div>
+
+  <!-- dados sobre contatos -->
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="phone">Telefone</label>
+      <input
+        type="tel"
+        class="form-control"
+        name="phone"
+        id="phone"
+        [value]="[member.contacts.phone]"
+      />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="cel">Celular</label>
+      <input
+        type="tel"
+        class="form-control"
+        name="cel"
+        id="cel"
+        [value]="[member.contacts.cel]"
+      />
+    </div>
+
+    <div class="form-group col-md-4">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        [value]="[member.contacts.email]"
+      />
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-3">
+      <label for="birth">Data de nascimento</label>
+      <input
+        type="date"
+        class="form-control"
+        name="birth"
+        id="birth"
+        [value]="[member.birthDate]"
+      />
+    </div>
+  </div>
+
+  <div class="form-row ">
+    <div class="pull-righ">
+      <button type="button" class="btn btn-primary">Primary</button>
+    </div>
+    <div class="pull-righ">
+      <button type="button" class="btn btn-secondary">Secondary</button>
+    </div>
+  </div>
 </form>
