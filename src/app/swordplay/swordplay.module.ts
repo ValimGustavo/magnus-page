@@ -14,6 +14,7 @@ import { PatentInfoComponent } from './components/patent/patent-info/patent-info
 import { OrderReadComponent } from './components/order/order-read/order-read.component';
 import { OrderMembersTableComponent } from './table/order/order-members-table/order-members-table.component';
 import { SkillPipe } from './pipes/skill.pipe';
+import { EvaluationComponent } from './components/evaluation/evaluation.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SkillPipe } from './pipes/skill.pipe';
     OrderReadComponent,
     OrderMembersTableComponent,
     SkillPipe,
+    EvaluationComponent,
   ],
   imports: [CommonModule, MatTableModule, MatPaginatorModule, MatSortModule, MembersModule],
 })

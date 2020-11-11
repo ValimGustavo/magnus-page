@@ -1,9 +1,12 @@
+import { SwordplayerDataSharedService } from './../../../services/shared/swordplayer-data-shared.service';
+import { SwordplayPlayer } from './../../../../../interfaces/swordplay/swordplay-player.interface';
 import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { OrderReadDataList } from 'src/interfaces/tables/order-read.interface';
 import { OrderMembersTableDataSource, OrderMembersTableItem } from './order-members-table-datasource';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-order-members-table',
@@ -18,6 +21,11 @@ export class OrderMembersTableComponent implements AfterViewInit, OnInit {
 
   @Input() datalist:OrderReadDataList
 
+  constructor(
+    private swordplayerDataSharedService: SwordplayerDataSharedService,
+    private router:Router
+  ){}
+
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'firstName', 'lastName'];
 
@@ -30,21 +38,18 @@ export class OrderMembersTableComponent implements AfterViewInit, OnInit {
       this.ordersColumns.push(order.name)
     }
 
-    // console.log(this.displayedColumns)
-    // console.log(this.ordersColumns);
-
-    // for(let orderColumn of this.ordersColumns){
-    //   for(let player of this.datalist.players){
-    //     console.log()
-    //   }
-    // }
-    
-
+ 
   }
 
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
+  }
+
+  goToEvaluation(player:SwordplayPlayer){
+    this.swordplayerDataSharedService.setState(player)
+    this.router.navigate(['/orders/member'])
+   
   }
 }

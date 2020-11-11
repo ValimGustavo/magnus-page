@@ -1,3 +1,4 @@
+import { EvaluationComponent } from './swordplay/components/evaluation/evaluation.component';
 import { OrderResolver } from './swordplay/resolvers/order/order-resolver.service';
 import { SwordplayMemberInfoComponent } from './swordplay/components/swordplay-member-info/swordplay-member-info.component';
 import { SworplayMembersReadComponent } from './swordplay/components/sworplay-members-read/sworplay-members-read.component';
@@ -39,6 +40,10 @@ const routes: Routes = [
     resolve:{
       data: OrderResolver
     }
+  },
+  {
+    path: 'orders/member',
+    component: EvaluationComponent,
   },
 ];
 
