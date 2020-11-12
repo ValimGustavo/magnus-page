@@ -1,28 +1,30 @@
-<app-order-info [orderInput]="orders"></app-order-info>
+<app-order-info [orderInput]="obtainedOrders"></app-order-info>
 
 <div class="card">
   <div class="card-header">
-    <p>Treino do dia {{ trainingOfTheDay.day }}</p>
+    <p>Treino do dia {{ trainingOfTheDay.day | date }}</p>
   </div>
   <div class="card-body">
     <ul class="list-group list-group-horizontal">
-      <li class="list-group-item">Treino do dia {{ trainingOfTheDay.day }}</li>
       <div *ngFor="let train of trainingOfTheDay.training">
         <li class="list-group-item">
-          <p class="card-text">{{ train.order }} {{ train.skill }}</p>
+          <p class="card-text">
+            <span class="badge badge-secondary">{{ train.order.name }}</span>
+            <span class="badge badge-secondary">{{ train.skillDay }}</span>
+          </p>
         </li>
       </div>
     </ul>
 
     <div *ngIf="show">
-      <div *ngFor="let order of orders">
-        <span>{{ order.name }}</span>
+      <div *ngFor="let train of trainingOfTheDay.training">
+        <span>{{ train.order.name }}</span>
         <div class="btn-group" role="group" aria-label="Basic example">
           <p>Obteve desempenho suficiente para passar?</p>
           <button
             type="button"
             class="btn btn-secondary"
-            (click)="conclusion()"
+            (click)="conclusion(train)"
           >
             Sim
           </button>
