@@ -1,3 +1,5 @@
+import { LoginModule } from './login/login.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MembersInfoComponent } from './members/components/members-info/members-info.component';
 import { SwordplayModule } from './swordplay/swordplay.module';
 import { MembersModule } from './members/members.module';
@@ -10,7 +12,6 @@ import { HeaderComponent } from './template/header/header.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +21,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatSidenavModule,
     MembersModule,
     SwordplayModule,
-    NgbModule
+    NgbModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,12 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 const baseUrl = 'http://localhost:3000'
 
+const serverUrl = 'http://localhost:8888'
+
 export const environment = {
   production: false,  
   memberEndPoint: baseUrl + '/members',
   swordplayEndPoint: baseUrl + '/swordplay',
   orderEndPoint: baseUrl + '/orders',
-  skillEndPoint: baseUrl + '/skills'
+  skillEndPoint: baseUrl + '/skills',
+  loginEndpoint: serverUrl + '/login'
 };
 
 /*
