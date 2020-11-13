@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
 
       //TODO: Remover 
-      user: ['teste'],
+      user: ['admin'],
       password: ['123']
     });
   }

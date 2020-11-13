@@ -11,7 +11,8 @@ export const environment = {
   swordplayEndPoint: baseUrl + '/swordplay',
   orderEndPoint: baseUrl + '/orders',
   skillEndPoint: baseUrl + '/skills',
-  loginEndpoint: serverUrl + '/login'
+  loginEndpoint: serverUrl + '/login',
+  authenticationEndpoint: serverUrl + '/auth'
 };
 
 /*
