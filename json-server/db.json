@@ -64,26 +64,43 @@
       "id": 1
     },
     {
-      "id": 2,
+      "member": {
+        "id": 2,
+        "firstName": "Mario",
+        "lastName": "Bros",
+        "contacts": {
+          "phone": "999999999",
+          "cel": "999999999",
+          "email": "999999999"
+        },
+        "birthDate": "11/02/1700"
+      },
       "orders": [
         {
           "id": 1,
           "name": "Arco",
           "description": "Order the bow",
-          "skill": "basico"
+          "skill": "Mestre"
         },
         {
           "id": 2,
           "name": "Dual",
           "description": "Order the dual",
           "skill": "avançado"
+        },
+        {
+          "id": 4,
+          "description": "descricao de lança",
+          "name": "Lança",
+          "skill": "Avançado"
         }
       ],
       "patent": {
         "id": 1,
         "description": "description the EOLERT",
         "name": "Peasant"
-      }
+      },
+      "id": 2
     }
   ],
   "skills": [
