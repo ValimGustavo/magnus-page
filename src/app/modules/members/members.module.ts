@@ -5,18 +5,21 @@ import { MembersReadComponentTable } from './table/members-read/members-read.com
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MembersInfoComponent } from './components/members-info/members-info.component';
+import { MemberRoutingModule } from './member.routing';
+import { MembersSharedModule } from 'src/app/shared/components/members-info/member.module';
 
 
 
 @NgModule({
-  declarations: [MembersReadComponentTable, MembersReadComponent, MembersInfoComponent ],
+  declarations: [MembersReadComponentTable, MembersReadComponent ],
   imports: [
     CommonModule,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    MemberRoutingModule,
+    MembersSharedModule
   ],
-  exports:[MembersInfoComponent]
+  exports:[MembersReadComponent]
 })
 export class MembersModule { }

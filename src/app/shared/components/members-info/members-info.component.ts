@@ -1,8 +1,8 @@
-import { MemberService } from './../../services/member.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Member } from 'src/interfaces/members/members.interface';
+import { MemberService } from 'src/app/modules/members/services/member.service';
 
 @Component({
   selector: 'app-members-info',
