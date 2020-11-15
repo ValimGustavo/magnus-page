@@ -27,7 +27,7 @@ export class LoginService {
         }
       );
   }
-s
+
   async getType(user){
     const response =this.http.post<{user:string, type:string}>(environment.authenticationEndpoint, user).toPromise()
 
@@ -35,5 +35,9 @@ s
 
 
 
+  }
+
+  createRegister(data){
+    return this.http.post(environment.createRegisterEndpoint, data)
   }
 }

@@ -11,7 +11,7 @@ import { HeaderComponent } from 'src/app/shared/components/header/header.compone
 import { AppComponent } from './components/app.component';
 import { MembersModule } from '../members/members.module';
 import { SwordplayModule } from '../swordplay/swordplay.module';
-import { LoginModule } from '../login/login.module';
+import { LoginModule } from '../user/login.module';
 @NgModule({
   declarations: [
     AppComponent,

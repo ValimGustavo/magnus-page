@@ -12,7 +12,8 @@ export const environment = {
   orderEndPoint: baseUrl + '/orders',
   skillEndPoint: baseUrl + '/skills',
   loginEndpoint: serverUrl + '/login',
-  authenticationEndpoint: serverUrl + '/auth'
+  authenticationEndpoint: serverUrl + '/auth',
+  createRegisterEndpoint: baseUrl + '/createRegister'
 };
 
 /*

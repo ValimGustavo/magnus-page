@@ -1,11 +1,10 @@
 ﻿## Tarefas
 
-- Refatorar rotas
+- [x] Refatorar rotas
 
 - Refatorar componentes
 
-- Registro membros
-
+  - Registro membros
   - Login
   - (qualquer componente com forms)
   - (qualquer componente com tabelas)
