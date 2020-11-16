@@ -7,21 +7,23 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MemberRoutingModule } from './member.routing';
-import { MembersSharedModule } from 'src/app/shared/components/members-info/member.module';
 import { MemberCreateComponent } from './components/member-create/member-create/member-create.component';
 import { MemberEditComponent } from './components/member-edit/member-edit.component';
+import { ParticipatorPipe } from './pipes/participator.pipe';
+import { SharedModule } from 'src/app/shared/components/module-shared.module';
+import { MemberParticipationsReadComponent } from 'src/app/shared/components/member-participations-read/member-participations-read.component';
 
 
 
 @NgModule({
-  declarations: [MembersReadComponentTable, MembersReadComponent, MemberCreateComponent, MemberEditComponent ],
+  declarations: [MembersReadComponentTable, MembersReadComponent, MemberCreateComponent, MemberEditComponent, ParticipatorPipe ],
   imports: [
     CommonModule,
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
     MemberRoutingModule,
-    MembersSharedModule,
+    SharedModule,
     ReactiveFormsModule
   ],
   exports:[MembersReadComponent]

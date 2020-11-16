@@ -33,5 +33,7 @@ export class MemberService {
     return this.http.delete(this.memberEndpoint + '/' + id)
   }
 
+  
+
 
 }

@@ -39,6 +39,6 @@ export class LoginService {
   }
 
   createRegister(data:Member){
-    return this.http.post(environment.createRegisterEndpoint, data)
+    return this.http.post(environment.memberEndPoint, data)
   }
 }

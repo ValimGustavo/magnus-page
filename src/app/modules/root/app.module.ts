@@ -12,6 +12,7 @@ import { AppComponent } from './components/app.component';
 import { MembersModule } from '../members/members.module';
 import { SwordplayModule } from '../swordplay/swordplay.module';
 import { LoginModule } from '../user/login.module';
+import { SharedModule } from 'src/app/shared/components/module-shared.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { LoginModule } from '../user/login.module';
     MembersModule,
     SwordplayModule,
     NgbModule,
-    LoginModule
+    LoginModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

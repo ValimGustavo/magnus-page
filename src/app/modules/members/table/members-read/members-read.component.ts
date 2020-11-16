@@ -24,7 +24,7 @@ export class MembersReadComponentTable implements AfterViewInit, OnInit {
   ){}
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['firstName', 'lastName'];
+  displayedColumns = ['firstName', 'lastName', 'participations'];
 
   ngOnInit() {
     this.dataSource = new MembersReadDataSource();

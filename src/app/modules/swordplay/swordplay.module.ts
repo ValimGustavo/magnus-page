@@ -1,3 +1,4 @@
+import { SharedModule } from './../../shared/components/module-shared.module';
 import { MembersModule } from './../members/members.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -15,7 +16,6 @@ import { OrderMembersTableComponent } from './table/order/order-members-table/or
 import { SkillPipe } from './pipes/skill.pipe';
 import { EvaluationComponent } from './components/evaluation/evaluation.component';
 import { SwordplayRoutingModule } from './swordplay.routing';
-import { MembersSharedModule } from 'src/app/shared/components/members-info/member.module';
 
 @NgModule({
   declarations: [
@@ -29,6 +29,6 @@ import { MembersSharedModule } from 'src/app/shared/components/members-info/memb
     SkillPipe,
     EvaluationComponent,
   ],
-  imports: [CommonModule, MatTableModule, MatPaginatorModule, MatSortModule, SwordplayRoutingModule,MembersSharedModule],
+  imports: [CommonModule, MatTableModule, MatPaginatorModule, MatSortModule, SwordplayRoutingModule, SharedModule],
 })
 export class SwordplayModule {}

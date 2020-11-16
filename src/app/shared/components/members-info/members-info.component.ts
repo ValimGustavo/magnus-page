@@ -2,7 +2,7 @@ import { catchError } from 'rxjs/operators';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { Member } from 'src/interfaces/members/members.interface';
+import { Member, Participator } from 'src/interfaces/members/members.interface';
 import { MemberService } from 'src/app/modules/members/services/member.service';
 import { Location } from '@angular/common';
 
@@ -31,13 +31,16 @@ export class MembersInfoComponent implements OnInit {
     } else {
       this.member = this.idInput;
     }
+
   }
 
   goToUpdateMember() {
     this.router.navigate([`/members/${this.member.id}/edit`]);
   }
 
-
+  onParticipations(participations: Participator[]){
+    this.member.participations = participations
+  }
   //TODO: IMPLEMENTAR MODO DE APENAS ADMINSTRADOR VER ESSE BOTAO
   // ATRAVES DO TIPO DE USER EM CONJUNTO COM ngIF
   deleteMember() {

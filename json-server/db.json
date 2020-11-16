@@ -1,4 +1,19 @@
 {
+  "activities":[
+    
+    {
+      "id": 1,
+      "modality": "swordplay"      
+    },
+    {
+      "id": 2,
+      "modality": "HEMA"      
+    },
+    {
+      "id": 3,
+      "modality": "dance"      
+    }    
+  ],
   "createregister": [
     {
       "firstName": "Mario",
@@ -34,7 +49,32 @@
         "number": 120,
         "street": "A rua mais sortuda do mundo"
       },
-      "birthDate": "21/02/1985"
+      "birthDate": "21/02/1985",
+      "participations": [
+        {
+          "id": 1,
+          "modality": "swordplay",
+          "active": true
+        }
+      ]
+    },
+    {
+      "firstName": "Mario",
+      "lastName": "Bros",
+      "contacts": {
+        "phone": "1111111111",
+        "cel": "11111111111",
+        "email": "mariobros@email.com"
+      },
+      "address": {
+        "street": "Rua Ilha dos Bros",
+        "number": 123,
+        "neighborhood": "YARD",
+        "city": "Cogumelandia"
+      },
+      "birthDate": "01/01/1236",
+      "id": 2,
+      "participations":[]
     }
   ],
   "swordplay": [
@@ -46,7 +86,7 @@
         "contacts": {
           "phone": "9999999999",
           "cel": "99999999999",
-          "email": "test@email.com"
+          "email": "t@email.com"
         },
         "address": {
           "city": "Limeira",
@@ -73,7 +113,7 @@
           "id": 3,
           "name": "Escudo",
           "description": "Order the shield",
-          "skill": "basico"
+          "skill": "Avançado"
         }
       ],
       "patent": {
@@ -209,4 +249,5 @@
       "description": "descriçao do Eolderman"
     }
   ]
+ 
 }
