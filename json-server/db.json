@@ -1,26 +1,40 @@
 {
+  "createregister": [
+    {
+      "firstName": "Mario",
+      "lastName": "Bros",
+      "contacts": {
+        "phone": "1111111111",
+        "cel": "11111111111",
+        "email": "mariobros@email.com"
+      },
+      "address": {
+        "street": "Rua Ilha dos Bros",
+        "number": 123,
+        "neighborhood": "YARD",
+        "city": "Cogumelandia"
+      },
+      "birthDate": "01/01/1236",
+      "id": 1
+    }
+  ],
   "members": [
     {
       "id": 1,
       "firstName": "Gustavo",
       "lastName": "Souza",
       "contacts": {
-        "phone": "999999999",
-        "cel": "999999999",
-        "email": "999999999"
+        "phone": "9999999999",
+        "cel": "99999999999",
+        "email": "t@email.com"
+      },
+      "address": {
+        "city": "Limeira",
+        "neighborhood": "Centro",
+        "number": 120,
+        "street": "A rua mais sortuda do mundo"
       },
       "birthDate": "21/02/1985"
-    },
-    {
-      "id": 2,
-      "firstName": "Mario",
-      "lastName": "Bros",
-      "contacts": {
-        "phone": "999999999",
-        "cel": "999999999",
-        "email": "999999999"
-      },
-      "birthDate": "11/02/1700"
     }
   ],
   "swordplay": [
@@ -30,9 +44,15 @@
         "firstName": "Gustavo",
         "lastName": "Souza",
         "contacts": {
-          "phone": "999999999",
-          "cel": "999999999",
-          "email": "999999999"
+          "phone": "9999999999",
+          "cel": "99999999999",
+          "email": "test@email.com"
+        },
+        "address": {
+          "city": "Limeira",
+          "neighborhood": "Centro",
+          "number": 120,
+          "street": "A rua mais sortuda do mundo"
         },
         "birthDate": "21/02/1985"
       },
@@ -69,9 +89,15 @@
         "firstName": "Mario",
         "lastName": "Bros",
         "contacts": {
-          "phone": "999999999",
-          "cel": "999999999",
-          "email": "999999999"
+          "phone": "9999999999",
+          "cel": "99999999999",
+          "email": "test@email.com"
+        },
+        "address": {
+          "city": "Limeira",
+          "neighborhood": "Centro",
+          "number": 120,
+          "street": "A rua mais sortuda do mundo"
         },
         "birthDate": "11/02/1700"
       },

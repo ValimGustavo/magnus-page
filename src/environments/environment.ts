@@ -13,7 +13,7 @@ export const environment = {
   skillEndPoint: baseUrl + '/skills',
   loginEndpoint: serverUrl + '/login',
   authenticationEndpoint: serverUrl + '/auth',
-  createRegisterEndpoint: baseUrl + '/createRegister'
+  createRegisterEndpoint: baseUrl + '/createregister'
 };
 
 /*

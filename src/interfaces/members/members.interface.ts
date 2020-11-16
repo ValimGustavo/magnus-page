@@ -9,5 +9,11 @@ export interface Member {
     cel: string | null;
     email: string | null;
   };
-  birthDate: string;
+  address: {
+    street: string,
+    number:  number,
+    neighborhood:  string,
+    city: string,
+ },
+ birthDate: string
 }

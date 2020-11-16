@@ -1,3 +1,4 @@
+import { Member } from 'src/interfaces/members/members.interface';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -37,7 +38,7 @@ export class LoginService {
 
   }
 
-  createRegister(data){
+  createRegister(data:Member){
     return this.http.post(environment.createRegisterEndpoint, data)
   }
 }

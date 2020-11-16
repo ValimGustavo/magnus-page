@@ -12,15 +12,25 @@ export class MemberService {
     private http: HttpClient
   ) { }
 
-  url = 'http://localhost:3000/members'
+  memberEndpoint = 'http://localhost:3000/members'
 
   getMember(id: string | number):Observable<Member>{
-    const url = this.url + '/' + id
+    const url = this.memberEndpoint + '/' + id
     return this.http.get<Member>(url)
   }
   
   read():Observable<Member[]>{
-    return this.http.get<Member[]>(this.url)
+    return this.http.get<Member[]>(this.memberEndpoint)
+  }
+
+  updateMember(member:Member){
+    console.log(member)
+    //TODO: CRIAR CODIGO CORRETO 
+    return this.http.put<Member>(this.memberEndpoint + '/'+ member.id, member)
+  }
+
+  deleteMember(id:string | number){
+    return this.http.delete(this.memberEndpoint + '/' + id)
   }
 
 

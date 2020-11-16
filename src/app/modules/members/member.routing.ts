@@ -1,4 +1,6 @@
-﻿import { NgModule } from '@angular/core';
+﻿import { InfoMemberResolve } from './resolvers/member/update-member.resolver';
+import { MemberEditComponent } from './components/member-edit/member-edit.component';
+import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminGuard } from 'src/app/guards/admin/admin.guard';
 import { MembersInfoComponent } from 'src/app/shared/components/members-info/members-info.component';
@@ -15,8 +17,19 @@ const routes: Routes = [
   {
     path: 'members/:id',
     component: MembersInfoComponent,
-    canActivate: [AdminGuard]
+    canActivate: [AdminGuard],
+    resolve: {
+      member: InfoMemberResolve
+    }
   },
+  {
+    path: 'members/:id/edit',
+    component: MemberEditComponent,
+    canActivate: [AdminGuard],
+    resolve: {
+      member: InfoMemberResolve
+    }
+  }
   ];
   
   @NgModule({

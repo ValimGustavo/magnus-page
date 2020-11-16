@@ -19,6 +19,7 @@
         name="lastName"
         id="lastName"
         [value]="[member.lastName]"
+        disabled
       />
     </div>
   </div>
@@ -27,12 +28,26 @@
   <div class="form-row">
     <div class="form-group col-md-3">
       <label for="street">Rua</label>
-      <input type="text" class="form-control" name="street" id="street" />
+      <input
+        type="text"
+        class="form-control"
+        name="street"
+        id="street"
+        [value]="[member.address.street]"
+        disabled
+      />
     </div>
 
     <div class="form-group col-md-3">
       <label for="number">Numero</label>
-      <input type="text" class="form-control" name="number" id="number" />
+      <input
+        type="text"
+        class="form-control"
+        name="number"
+        id="number"
+        [value]="[member.address.number]"
+        disabled
+      />
     </div>
 
     <div class="form-group col-md-3">
@@ -42,12 +57,21 @@
         class="form-control"
         name="neighborhood"
         id="neighborhood"
+        [value]="[member.address.neighborhood]"
+        disabled
       />
     </div>
 
     <div class="form-group col-md-3">
       <label for="city">Cidade</label>
-      <input type="text" class="form-control" name="city" id="city" />
+      <input
+        type="text"
+        class="form-control"
+        name="city"
+        id="city"
+        [value]="[member.address.city]"
+        disabled
+      />
     </div>
   </div>
 
@@ -61,6 +85,7 @@
         name="phone"
         id="phone"
         [value]="[member.contacts.phone]"
+        disabled
       />
     </div>
     <div class="form-group col-md-4">
@@ -71,6 +96,7 @@
         name="cel"
         id="cel"
         [value]="[member.contacts.cel]"
+        disabled
       />
     </div>
 
@@ -82,6 +108,7 @@
         name="email"
         id="email"
         [value]="[member.contacts.email]"
+        disabled
       />
     </div>
   </div>
@@ -95,16 +122,30 @@
         name="birth"
         id="birth"
         [value]="[member.birthDate]"
+        disabled
       />
     </div>
   </div>
 
-  <div class="form-row ">
+  <div class="form-row">
     <div class="pull-righ">
-      <button type="button" class="btn btn-primary">Primary</button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="goToUpdateMember()"
+      >
+        Atualizar
+      </button>
     </div>
     <div class="pull-righ">
-      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-danger" (click)="deleteMember()">
+        Deletar
+      </button>
+    </div>
+    <div class="pull-righ">
+      <button type="button" class="btn btn-secondary" (click)="backPage()">
+        Fechar
+      </button>
     </div>
   </div>
 </form>
