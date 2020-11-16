@@ -1,5 +1,5 @@
 <form>
     <app-members-info [idInput]="swordplayPlayer.member"></app-members-info>
     <app-order-info [orderInput]="swordplayPlayer.orders"></app-order-info>
-    <app-patent-info [patentInput]="swordplayPlayer.patent"></app-patent-info>
+    <app-patent-info [idMember]="swordplayPlayer.member.id"[patentInput]="swordplayPlayer.patent"></app-patent-info>
 </form>

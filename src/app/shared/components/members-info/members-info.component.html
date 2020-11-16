@@ -128,7 +128,7 @@
     </div>
   </div>
 
-  <app-member-participations-read [memberParticipations]="member.participations"></app-member-participations-read>
+  <app-member-participations-read [memberParticipations]="member.participations" (newParticipatiosEvent)="onParticipations($event)" ></app-member-participations-read>
   <div class="form-row">
     <div class="pull-righ">
       <button

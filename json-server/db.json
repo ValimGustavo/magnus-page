@@ -1,18 +1,17 @@
 {
-  "activities":[
-    
+  "activities": [
     {
       "id": 1,
-      "modality": "swordplay"      
+      "modality": "swordplay"
     },
     {
       "id": 2,
-      "modality": "HEMA"      
+      "modality": "HEMA"
     },
     {
       "id": 3,
-      "modality": "dance"      
-    }    
+      "modality": "dance"
+    }
   ],
   "createregister": [
     {
@@ -74,7 +73,23 @@
       },
       "birthDate": "01/01/1236",
       "id": 2,
-      "participations":[]
+      "participations": [
+        {
+          "id": 1,
+          "modality": "swordplay",
+          "active": true
+        },
+        {
+          "id": 2,
+          "modality": "HEMA",
+          "active": true
+        },
+        {
+          "id": 3,
+          "modality": "dance",
+          "active": true
+        }
+      ]
     }
   ],
   "swordplay": [
@@ -94,7 +109,14 @@
           "number": 120,
           "street": "A rua mais sortuda do mundo"
         },
-        "birthDate": "21/02/1985"
+        "birthDate": "21/02/1985",
+        "participations": [
+          {
+            "id": 1,
+            "modality": "swordplay",
+            "active": true
+          }
+        ]
       },
       "orders": [
         {
@@ -107,12 +129,18 @@
           "id": 2,
           "name": "Dual",
           "description": "Order the dual",
-          "skill": "Basico"
+          "skill": "Mestre"
         },
         {
           "id": 3,
           "name": "Escudo",
           "description": "Order the shield",
+          "skill": "Avançado"
+        },
+        {
+          "id": 4,
+          "description": "descricao de lança",
+          "name": "Lança",
           "skill": "Avançado"
         }
       ],
@@ -125,21 +153,38 @@
     },
     {
       "member": {
-        "id": 2,
         "firstName": "Mario",
         "lastName": "Bros",
         "contacts": {
-          "phone": "9999999999",
-          "cel": "99999999999",
-          "email": "test@email.com"
+          "phone": "1111111111",
+          "cel": "11111111111",
+          "email": "mariobros@email.com"
         },
         "address": {
-          "city": "Limeira",
-          "neighborhood": "Centro",
-          "number": 120,
-          "street": "A rua mais sortuda do mundo"
+          "street": "Rua Ilha dos Bros",
+          "number": 123,
+          "neighborhood": "YARD",
+          "city": "Cogumelandia"
         },
-        "birthDate": "11/02/1700"
+        "birthDate": "01/01/1236",
+        "id": 2,
+        "participations": [
+          {
+            "id": 1,
+            "modality": "swordplay",
+            "active": true
+          },
+          {
+            "id": 2,
+            "modality": "HEMA",
+            "active": true
+          },
+          {
+            "id": 3,
+            "modality": "dance",
+            "active": true
+          }
+        ]
       },
       "orders": [
         {
@@ -159,6 +204,12 @@
           "description": "descricao de lança",
           "name": "Lança",
           "skill": "Avançado"
+        },
+        {
+          "id": 3,
+          "description": "descricao de escudo",
+          "name": "Escudo",
+          "skill": "Mestre"
         }
       ],
       "patent": {
@@ -249,5 +300,4 @@
       "description": "descriçao do Eolderman"
     }
   ]
- 
 }

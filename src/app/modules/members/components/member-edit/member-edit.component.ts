@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Member } from 'src/interfaces/members/members.interface';
+import { Member, Participator } from 'src/interfaces/members/members.interface';
 import { MemberService } from 'src/app/modules/members/services/member.service';
 import { LoginService } from 'src/app/modules/user/services/login.service';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -84,9 +84,11 @@ export class MemberEditComponent implements OnInit {
       ],
     });
   }
+
   updateMember() {
     const dataUpdate: Member = this.formMember.value;
     dataUpdate['id'] = this.updatingMember.id;
+    dataUpdate["participations"] = this.updatingMember.participations
 
     this.memberService.updateMember(dataUpdate).subscribe(
       (response) => {
@@ -102,6 +104,10 @@ export class MemberEditComponent implements OnInit {
         this.router.navigate(['/members'])
       }
     );
+  }
+
+  onParticipations(participations:Participator[]){
+    this.updatingMember.participations = participations
   }
 
   onCancel() {

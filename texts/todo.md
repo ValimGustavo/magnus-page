@@ -9,6 +9,8 @@
   - (qualquer componente com forms)
   - (qualquer componente com tabelas)
 
+- [] Criar CRUD para participations
+
 - Criar Resolvers para componentes que precisam
 
 - Criar Guards

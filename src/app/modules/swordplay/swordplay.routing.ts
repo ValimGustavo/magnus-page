@@ -26,6 +26,15 @@ const routes: Routes = [
     canActivate: [AdminGuard]
   },
   {
+    path: 'swordplay/member/:id/evaluation',
+    component: EvaluationComponent,
+    resolve: {
+      swordplayMemberResolve: SwordplayMemberResolver
+    },
+    canActivate: [AdminGuard]
+  },
+
+  {
     path: 'orders',
     component: OrderReadComponent,
     resolve:{

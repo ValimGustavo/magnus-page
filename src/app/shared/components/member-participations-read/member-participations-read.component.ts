@@ -23,7 +23,7 @@ export class MemberParticipationsReadComponent implements OnInit {
 
   //PQ ISSO FUNCIONA????
   //@Output() newParticipatiosEvent: EventEmitter<Participator[]>
-  @Output() newParticipatiosEvent = new EventEmitter()
+  @Output() newParticipationsEvent = new EventEmitter()
 
   activities: any
 
@@ -56,7 +56,7 @@ export class MemberParticipationsReadComponent implements OnInit {
         active: true
       })
     }
-    this.newParticipatiosEvent.emit(this.memberParticipations)
+    this.newParticipationsEvent.emit(this.memberParticipations)
   }
 
 }

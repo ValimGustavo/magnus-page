@@ -1,6 +1,6 @@
 import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { SwordplayerDataSharedService } from './../../services/shared/swordplayer-data-shared.service';
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/interfaces/swordplay/orders.interfaces';
@@ -18,7 +18,8 @@ export class EvaluationComponent implements OnInit {
   constructor(
     private swordplayerDataSharedService: SwordplayerDataSharedService,
     private router: Router,
-    private http: HttpClient
+    private http: HttpClient,
+    private activatedRoute:ActivatedRoute 
   ) {}
   obtainedOrders: Order[];
 
@@ -43,7 +44,7 @@ export class EvaluationComponent implements OnInit {
           name: ORDERS.DUAL,
           description: 'descricao de dual',
         },
-        skillDay: SKILL.BASIC,
+        skillDay: SKILL.MASTER,
       },
       {
         order: {
@@ -51,7 +52,7 @@ export class EvaluationComponent implements OnInit {
           name: ORDERS.SHIELD,
           description: 'descricao de escudo',
         },
-        skillDay: SKILL.ADVANCED,
+        skillDay: SKILL.MASTER,
       },
       {
         order: {
@@ -59,13 +60,21 @@ export class EvaluationComponent implements OnInit {
           name: ORDERS.SPEAR,
           description: 'descricao de lança',
         },
-        skillDay: SKILL.ADVANCED,
+        skillDay: SKILL.MASTER,
       },
     ],
   };
 
   ngOnInit(): void {
-    this.swordplayPlayer = this.swordplayerDataSharedService.getState();
+
+    const informationMember = this.activatedRoute.snapshot.data['swordplayMemberResolve']
+
+    if(informationMember){
+      this.swordplayPlayer = informationMember
+    }else{
+      this.swordplayPlayer = this.swordplayerDataSharedService.getState();
+    }
+    
     this.obtainedOrders = this.swordplayPlayer?.orders;
   }
 
