@@ -1,0 +1,8 @@
+<div *ngFor="let activity of activitiesOffered">
+  <p>
+    {{ activity.name }} {{ activity.description }}
+     <button (click)="edit(activity)">Editar</button>
+     <button (click)="delete(activity)">Deletar</button>
+  </p>
+</div>
+<button (click)="createActivity()">Criar atividade</button>

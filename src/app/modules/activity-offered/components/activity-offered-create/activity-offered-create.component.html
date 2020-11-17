@@ -1,0 +1,10 @@
+<form [formGroup]="activityForm">
+    <label for="name">Nome</label>
+    <input id="name" name="name"   formControlName="name">
+
+    <label for="description">Descriçao</label>
+    <textarea id="description" name="description"   formControlName="description"></textarea>
+
+    <button type="submit" class="btn btn-primary" (click)="submit()"  [disabled]="activityForm.invalid">Criar</button>
+    <input type="button" class="btn btn-primary" (click)="close()" value="Fechar">
+</form>

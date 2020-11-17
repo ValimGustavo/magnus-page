@@ -5,7 +5,7 @@
 
 <h2>Todas atividades oferecidas</h2>
 <div *ngFor="let activity of activities">
-    <input type="button" (click)=addActivity(activity) value="{{ activity.modality }}">
+    <input type="button" (click)=addActivity(activity) value="{{ activity.name }}">
 </div>
-<button class="btn btn-primary">Adicionar</button>
+<button class="btn btn-primary" >Adicionar</button>
 <button class="btn btn-secundary">Fechar</button>

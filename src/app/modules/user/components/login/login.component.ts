@@ -26,6 +26,20 @@ export class LoginComponent implements OnInit {
   }
 
   submit() {
-    this.loginService.login(this.loginForm.value)
+    this.loginService.login(this.loginForm.value).subscribe(
+      (response) => {
+       
+        //TODO: CRIAR A LOGICA CORRETA
+        if(response){
+          localStorage.setItem('token', JSON.stringify(response))
+          console.log('save in localStorage')
+          
+          //TODO: CRIAR NAVEGAÇAO PARA DASHBOARD
+        }
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }

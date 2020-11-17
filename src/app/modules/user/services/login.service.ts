@@ -12,21 +12,9 @@ export class LoginService {
 
   login(data) {
     
-    this.http
+    return this.http
       .post<Response>(environment.loginEndpoint, data)
-      .subscribe(
-        (response) => {
-         
-          //TODO: CRIAR A LOGICA CORRETA
-          if(response){
-            localStorage.setItem('token', JSON.stringify(response))
-            console.log('save in localStorage')
-          }
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
+      
   }
 
   async getType(user){

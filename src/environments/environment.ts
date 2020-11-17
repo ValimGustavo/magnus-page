@@ -6,7 +6,8 @@ const baseUrl = 'http://localhost:3000'
 const serverUrl = 'http://localhost:8888'
 
 export const environment = {
-  production: false,  
+  production: false,
+  activityOfferedEndpoint: baseUrl + '/activityoffered',
   activitiesEndpoind: baseUrl + '/activities',
   memberEndPoint: baseUrl + '/members',
   swordplayEndPoint: baseUrl + '/swordplay',

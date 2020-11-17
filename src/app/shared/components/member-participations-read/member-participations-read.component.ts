@@ -1,3 +1,4 @@
+import { ActivityOffered } from './../../../../interfaces/acitivityOffered/activityOffered.interface';
 import { ParticipationsService } from './../../services/participations/participations.service';
 import { ActivatedRoute } from '@angular/router';
 import { MemberService } from 'src/app/modules/members/services/member.service';
@@ -41,7 +42,7 @@ export class MemberParticipationsReadComponent implements OnInit {
   }
 
 
-  addActivity(activity:Participator){
+  addActivity(activity:ActivityOffered){
 
     const foundRegistration = this.memberParticipations.find(memberRegistration => {
       if (memberRegistration.id === activity.id){
@@ -52,7 +53,7 @@ export class MemberParticipationsReadComponent implements OnInit {
     if(!foundRegistration){
       this.memberParticipations.push({
         id: activity.id,
-        modality: activity.modality,
+        modality: activity.name,
         active: true
       })
     }

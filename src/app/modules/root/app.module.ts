@@ -1,3 +1,4 @@
+import { ActivityOfferedModule } from './../activity-offered/activity-offered.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -30,7 +31,8 @@ import { SharedModule } from 'src/app/shared/components/module-shared.module';
     SwordplayModule,
     NgbModule,
     LoginModule,
-    SharedModule
+    SharedModule,
+    ActivityOfferedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,16 +1,31 @@
 {
+  "activityoffered": [
+    {
+      "name": "PronomePlural",
+      "description": "11123",
+      "id": 5
+    },
+    {
+      "name": "AABBCCABCDE",
+      "description": "242423423",
+      "id": 6
+    }
+  ],
   "activities": [
     {
       "id": 1,
-      "modality": "swordplay"
+      "name": "swordplay",
+      "description": "swordplay description"
     },
     {
       "id": 2,
-      "modality": "HEMA"
+      "name": "HEMA",
+      "description": "hema description"
     },
     {
       "id": 3,
-      "modality": "dance"
+      "name": "dance",
+      "description": "dance description"
     }
   ],
   "createregister": [
