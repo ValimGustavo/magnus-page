@@ -20,6 +20,9 @@ export class MemberCreateComponent implements OnInit {
     private loginService:LoginService
   ) { }
 
+  //TODO: CRIAR UM ARQUIVO QUE GERE AS MENSAGEM COM OS VALIDATORS
+
+  //TODO: ESCREVER MENSAGENS MELHORES
 
 
   firstNameCondition = [{
