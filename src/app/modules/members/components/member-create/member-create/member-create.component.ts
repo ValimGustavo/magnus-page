@@ -22,6 +22,103 @@ export class MemberCreateComponent implements OnInit {
 
 
 
+  firstNameCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'minlength',
+    message: 'Necessario ao menos 2 letras'
+  },
+  ]
+
+  lastNameCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'minlength',
+    message: 'Necessario ao menos 2 letras'
+  },
+  ]
+
+  streetCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'minlength',
+    message: 'Necessario ao menos 2 letras'
+  },
+  ]
+
+  phoneCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'pattern',
+    message: 'Nao esta seguindo o padrao'
+  }
+  ]
+  celCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'pattern',
+    message: 'Nao esta seguindo o padrao'
+  }
+  ]
+
+  emailCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'email',
+    message: 'Nao esta seguindo o padrao'
+  }
+  ]
+
+
+
+  numberCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'pattern',
+    message: 'Nao esta seguindo o padrao'
+  }
+  ]
+
+  neighborhoodCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'minlength',
+    message: 'Necessario ao menos 2 letras'
+  },
+  ]
+
+  cityCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  {
+    prop: 'minlength',
+    message: 'Necessario ao menos 2 letras'
+  },
+  ]
+
+  birthDateCondition = [{
+    prop: 'required',
+    message: 'Necessario preencher campo'
+  },
+  ]
+
   ngOnInit(): void {
     //TODO: REMOVER OS TESTES
     this.formMember = this.formBuilder.group({
@@ -53,7 +150,7 @@ export class MemberCreateComponent implements OnInit {
       ])],
         number: [123, Validators.compose([
         Validators.required,
-        Validators.pattern("[0-9]+")
+       // Validators.pattern("[0-9]+")
       ])],
         neighborhood: ["YARD", Validators.compose([
         Validators.required
@@ -85,4 +182,45 @@ export class MemberCreateComponent implements OnInit {
   onCancel(){
     this.router.navigate(['/login'])
   }
+
+  get firstName() {
+    return this.formMember.controls.firstName
+  }
+  get lastName() {
+    return this.formMember.controls.lastName
+  }
+  
+  get street() {
+    return this.formMember.get('address').get('street')
+  }
+
+  get number() {
+    return this.formMember.get('address').get('number')
+  }
+
+  get city() {
+    return this.formMember.get('address').get('city')
+  }
+
+  get neighborhood() {
+    return this.formMember.get('address').get('neighborhood')
+  }
+
+  get phone() {
+    return this.formMember.get('contacts').get('phone')
+  }
+
+  get cel() {
+    return this.formMember.get('contacts').get('cel')
+  }
+
+  get email() {
+    return this.formMember.get('contacts').get('email')
+  }
+
+
+  get birthDate() {
+    return this.formMember.controls.birthDate
+  }
+  
 }

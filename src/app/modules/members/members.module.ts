@@ -12,6 +12,7 @@ import { MemberEditComponent } from './components/member-edit/member-edit.compon
 import { ParticipatorPipe } from './pipes/participator.pipe';
 import { SharedModule } from 'src/app/shared/components/module-shared.module';
 import { MemberParticipationsReadComponent } from 'src/app/shared/components/member-participations-read/member-participations-read.component';
+import { AlertComponent } from 'src/app/shared/components/alert/alert.component';
 
 
 

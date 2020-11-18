@@ -1,0 +1,18 @@
+<div
+        [ngClass] = "['alert', alertType]"
+        role="alert"
+        *ngIf="
+         name.invalid &&
+          (name.dirty ||
+           name.touched)
+        "
+      >
+
+      <div *ngFor="let condition of conditions">
+        <div *ngIf="name.errors[condition.prop]">
+            {{ condition.message}}
+          </div>
+      </div>
+        
+       
+      </div>

@@ -11,22 +11,11 @@
         formControlName="firstName"
       />
 
-      <div
-        class="alert alert-danger"
-        role="alert"
-        *ngIf="
-          formMember.controls.firstName.invalid &&
-          (formMember.controls.firstName.dirty ||
-            formMember.controls.firstName.touched)
-        "
-      >
-        <div *ngIf="formMember.controls.firstName.errors.required">
-          Campo nome eh obrigatorio
-        </div>
-        <div *ngIf="formMember.controls.firstName.errors.minlength">
-          Campo nome precisa conter ao menos 2 caracteres
-        </div>
-      </div>
+      <app-alert
+        alertType="alert-danger"
+        [name]="firstName"
+        [conditions]="firstNameCondition"
+      ></app-alert>
     </div>
     <div class="form-group col-md-5">
       <label for="lastName">Sobrenome</label>
@@ -37,22 +26,11 @@
         id="lastName"
         formControlName="lastName"
       />
-      <div
-        class="alert alert-danger"
-        role="alert"
-        *ngIf="
-          formMember.controls.lastName.invalid &&
-          (formMember.controls.lastName.dirty ||
-            formMember.controls.lastName.touched)
-        "
-      >
-        <div *ngIf="formMember.controls.lastName.errors.required">
-          Campo nome eh obrigatorio
-        </div>
-        <div *ngIf="formMember.controls.lastName.errors.minlength">
-          Campo nome precisa conter ao menos 2 caracteres
-        </div>
-      </div>
+      <app-alert
+        alertType="alert-danger"
+        [name]="lastName"
+        [conditions]="lastNameCondition"
+      ></app-alert>
     </div>
   </div>
 
@@ -67,26 +45,12 @@
         id="street"
         formControlName="street"
       />
-      <div *ngIf="formMember.get('address').get('street').invalid">
-        <p>Campo street invalido</p>
-      </div>
 
-      <div
-        class="alert alert-danger"
-        role="alert"
-        *ngIf="
-        formMember.get('address').get('street').invalid &&
-          (formMember.get('address').get('street').dirty ||
-          formMember.get('address').get('street').touched)
-        "
-      >
-        <div *ngIf="formMember.get('address').get('street').errors.required">
-          Campo nome eh obrigatorio
-        </div>
-        <div *ngIf="formMember.get('address').get('street').errors.minlength">
-          Campo nome precisa conter ao menos 10 caracteres
-        </div>
-      </div>
+      <app-alert
+        alertType="alert-danger"
+        [name]="street"
+        [conditions]="streetCondition"
+      ></app-alert>
     </div>
 
     <div class="form-group col-md-3">
@@ -98,9 +62,11 @@
         id="number"
         formControlName="number"
       />
-      <div *ngIf="formMember.get('address').get('number').invalid">
-        <p>Campo number invalido</p>
-      </div>
+      <app-alert
+        alertType="alert-danger"
+        [name]="number"
+        [conditions]="numberCondition"
+      ></app-alert>
     </div>
 
     <div class="form-group col-md-3">
@@ -112,9 +78,11 @@
         id="neighborhood"
         formControlName="neighborhood"
       />
-      <div *ngIf="formMember.get('address').get('neighborhood').invalid">
-        <p>Campo neighborhood invalido</p>
-      </div>
+      <app-alert
+        alertType="alert-danger"
+        [name]="neighborhood"
+        [conditions]="neighborhoodCondition"
+      ></app-alert>
     </div>
 
     <div class="form-group col-md-3">
@@ -127,9 +95,11 @@
         formControlName="city"
       />
     </div>
-    <div *ngIf="formMember.get('address').get('city').invalid">
-      <p>Campo city invalido</p>
-    </div>
+    <app-alert
+      alertType="alert-danger"
+      [name]="city"
+      [conditions]="cityCondition"
+    ></app-alert>
   </div>
 
   <!-- dados sobre contatos -->
@@ -143,9 +113,7 @@
         id="phone"
         formControlName="phone"
       />
-      <div *ngIf="formMember.get('contacts').get('phone').invalid">
-        <p>Campo phone invalido</p>
-      </div>
+      <app-alert alertType="alert-danger" [name]='phone'[conditions]=phoneCondition ></app-alert>
     </div>
     <div class="form-group col-md-4">
       <label for="cel">Celular</label>
@@ -156,9 +124,7 @@
         id="cel"
         formControlName="cel"
       />
-      <div *ngIf="formMember.get('contacts').get('cel').invalid">
-        <p>Campo cel invalido</p>
-      </div>
+      <app-alert alertType="alert-danger" [name]='cel'[conditions]=celCondition ></app-alert>
     </div>
 
     <div class="form-group col-md-4">
@@ -170,9 +136,7 @@
         id="email"
         formControlName="email"
       />
-      <div *ngIf="formMember.get('contacts').get('email').invalid">
-        <p>Campo email invalido</p>
-      </div>
+      <app-alert alertType="alert-danger" [name]='email'[conditions]=emailCondition ></app-alert>
     </div>
   </div>
 
@@ -186,9 +150,7 @@
         id="birth"
         formControlName="birthDate"
       />
-      <div *ngIf="formMember.get('birthDate').invalid">
-        <p>Campo birthDate invalido</p>
-      </div>
+      <app-alert alertType="alert-danger" [name]='birthDate'[conditions]=birthDateCondition ></app-alert>
     </div>
   </div>
 
