@@ -2,6 +2,10 @@
 
 - [x] Refatorar rotas
 
+- [ ] Criar modos de componentes (reaproveitar)
+
+- [ ] Criar componente de alerta (validaçao de campos)
+
 - Refatorar componentes
 
   - Registro membros
@@ -9,7 +13,7 @@
   - (qualquer componente com forms)
   - (qualquer componente com tabelas)
 
-- [] Criar CRUD para participations
+- [X] Criar CRUD para participations
 
 - Criar Resolvers para componentes que precisam
 

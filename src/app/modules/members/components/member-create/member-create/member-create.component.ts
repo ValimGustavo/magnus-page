@@ -20,14 +20,18 @@ export class MemberCreateComponent implements OnInit {
     private loginService:LoginService
   ) { }
 
+
+
   ngOnInit(): void {
     //TODO: REMOVER OS TESTES
     this.formMember = this.formBuilder.group({
       firstName: ["Mario", Validators.compose([
-        Validators.required
+        Validators.required,
+        Validators.minLength(2)
       ])],
       lastName: ["Bros", Validators.compose([
-        Validators.required
+        Validators.required,
+        Validators.minLength(2)
       ])],
       contacts: this.formBuilder.group({
         phone: ["1111111111", Validators.compose([
